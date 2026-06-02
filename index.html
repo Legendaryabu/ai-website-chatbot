@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium AI Chatbot Widget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bot-widget-wrapper">
+    
+    <div class="launcher-tooltip" id="launcher-tooltip" onclick="toggleChat()">
+      <span>Have a question? Ask me!</span>
+      <button class="tooltip-close" onclick="event.stopPropagation(); closeTooltip();">&times;</button>
+    </div>
+
+    <div class="chat-launcher" id="chat-launcher" onclick="toggleChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+    </div>
+
+    <div class="chat-container hidden" id="chat-container">
+      
+      <div class="chat-header">
+        <div class="bot-profile">
+          <div class="avatar-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Bot Avatar" class="bot-avatar">
+            <span class="status-beacon"></span>
+          </div>
+          <div class="header-text">
+            <h3>Customer Support</h3>
+            <span class="sub-status">Active Online</span>
+          </div>
+        </div>
+        <button class="close-btn" onclick="toggleChat()">&times;</button>
+      </div>
+
+      <div class="chat-box" id="chat-box">
+        </div>
+
+      <form class="chat-input-area" id="chat-form" onsubmit="event.preventDefault(); sendMessage();">
+        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" required>
+        <button type="submit" id="send-btn">Send</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

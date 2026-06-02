@@ -1,0 +1,6 @@
+# Ignore internal local configuration files containing private credentials
+config.php
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
