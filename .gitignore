@@ -1,6 +1,9 @@
-# Ignore internal local configuration files containing private credentials
-config.php
+# Block configuration keys tucked inside the config directory
+config/config.php
 
-# Ignore OS files
+# Optional: Block private business knowledge profiles from getting pushed
+config/knowledge.txt
+
+# OS Files
 .DS_Store
 Thumbs.db
